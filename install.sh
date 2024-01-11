@@ -8,7 +8,7 @@ fi
 
 
 # install all needed dependencies from pacman
-sudo pacman -S --noconfirm git qtile picom python kitty feh rofi base-devel xorg-xrandr xorg-server noto-fonts-cjk noto-fonts-emoji noto-fonts python-psutil ttf-jetbrains-mono-nerd ttf-meslo-nerd || {
+sudo pacman -S --noconfirm git qtile picom python kitty feh rofi base-devel xorg-xrandr xorg-server which noto-fonts-cjk noto-fonts-emoji noto-fonts python-psutil ttf-jetbrains-mono-nerd ttf-meslo-nerd || {
 	echo "Failed to install needed packages from pacman"
 	exit 1
 }
@@ -37,23 +37,13 @@ mkdir -p "$HOME/.local/share/backgrounds/cold-darkness"
 # install custom terminal
 install_terminal () {
 	sudo pacman -S --noconfirm zsh
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-	if [ -f "$HOME/.zshrc" ]; then
-		echo
-		echo "User already have a .zshrc file, do you want to override it?"
-		echo "[y/n]"
-		while true; do
-			read yn
-			case $yn in
-				[yY] ) \cp -r optional/.* "$HOME/"; break;;
-				[nN] ) break;;
-			esac
-		done
-	else
-		\cp -r optional/.* "$HOME/"
-	fi
+	\cp -r optional/.* "$HOME/"
+	echo
+	echo "you will be prompted to enter your password in order to change the default terminal to .zsh"
+	chsh -s "$(which zsh)"
 }
 
 echo
