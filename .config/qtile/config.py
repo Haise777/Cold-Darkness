@@ -5,10 +5,10 @@
 # settings/groupsconf.py  - Workspaces
 # settings/hooks.py       - Event hooks
 
-from settings.groupsconf import groups
-from settings.keymapsconf import keys
-from settings.layoutsconf import layouts, floating_layout
-from settings.screenconf import screens, widget_defaults
+from settings.groups import groups
+from settings.keymaps import keys
+from settings.layouts import layouts, floating_layout
+from settings.screen import screens, widget_defaults
 from settings.hooks import autostart, floating_dialogs
 
 extension_defaults = widget_defaults.copy()
