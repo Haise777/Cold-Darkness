@@ -1,7 +1,7 @@
 #!/bin/bash
 #github: https://github.com/Haise777
 
-if [ ! -e "../cold-darkness" ]; then
+if [ ! -e "../Cold-Darkness" ]; then
 	echo "Installation script must be executed within its directory"
 	exit 1
 fi
@@ -24,7 +24,7 @@ fi
 	\cp -r .config/* "$HOME/.config/"
 
 	# Launch configuration options to the user
-	python installation_options.py
+	python installation_options.py --install
 
 } || { echo "Failed to copy config files"; exit 1; }
 
@@ -69,7 +69,8 @@ while true; do
 	esac
 done
 
-echo "Finished installing, you can safely delete this directory"
+echo "Finished installing"
+echo "You can safely delete this directory or you can keep it and use the installation_options.py script to reconfigure it"
 echo "To set the wallpapers list the theme will use, put the images you want to use in the '$HOME/.local/share/backgrounds/cold-darkness' directory"
 
 echo "You will need to reboot to see effect"

@@ -1,8 +1,16 @@
 #github: https://github.com/Haise777
 
 from optional.inst_options_util import bar_widgets
+from sys import argv
 #from shutil import copy2
 import os
+
+# Arg to see if it should give the overwrite warning
+if len(argv) == 1:
+    print('Warning: This script will overwrite any changes you\'ve made to \'grous.py\', \'screen.py\' files')
+elif argv[1] != '--install':
+    print(argv[0] + ' is not a valid argument')
+    exit(1)
 
 home_dir = os.path.expanduser('~') + '/'
 
