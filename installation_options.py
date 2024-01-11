@@ -1,9 +1,29 @@
-from inst_options_util import bar_widgets
+#github: https://github.com/Haise777
+
+from optional.inst_options_util import bar_widgets
+from shutil import copy2
 import os
 
 home_dir = os.path.expanduser('~') + '/'
 
 ## Show the options to the user
+def copy_colorscheme(selected):
+    selected_theme = f'colorschemes/{selected}/'
+    copy2(f'{selected_theme}colorpalett.py', f'{home_dir}.config/qtile/')
+    copy2(f'{selected_theme}kitty.conf', f'{home_dir}.config/kitty/')
+    
+print('Select a color scheme to use')
+print('[1] Darkness')
+print('[2] RRR\n')
+while True:
+    choice = input()
+    if choice == '1':
+        copy_colorscheme('darkness')
+        break
+    elif choice == '2':
+        copy_colorscheme('RRR')
+        break
+
 print('How should the available workspace be displayed')
 print('[1] Japanese style')
 print('[2] Numbers style\n')
@@ -42,6 +62,7 @@ while True:
         fixed = True
         break
 
+
 print("Writting custom config")
 
 # Append setting to picom.conf file
@@ -56,6 +77,8 @@ rounded-corners-exclude = [
 # Write the costumized groups.conf file
 with open(home_dir + ".config/qtile/settings/groups.py", 'w') as f:
     f.write(f'''\
+#github: https://github.com/Haise777
+
 from libqtile.config import Group
        
 # Define available workspaces here
@@ -77,6 +100,8 @@ groups = [
 # Write the costumized screenconf.py file
 with open(home_dir + ".config/qtile/settings/screen.py", 'w') as f:
     f.write(f'''\
+#github: https://github.com/Haise777
+
 from libqtile import bar, widget
 from libqtile.config import Screen
 from colorpalett import colors

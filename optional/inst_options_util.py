@@ -1,3 +1,5 @@
+#github: https://github.com/Haise777
+
 bar_widgets = {
     "centered": '''\
                 widget.Spacer(length=10),

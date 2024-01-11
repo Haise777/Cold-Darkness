@@ -1,3 +1,5 @@
+#github: https://github.com/Haise777
+
 from libqtile.config import Key, Drag, Click
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal

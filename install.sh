@@ -1,4 +1,5 @@
 #!/bin/bash
+#github: https://github.com/Haise777
 
 if [ ! -e "../cold-darkness" ]; then
 	echo "Installation script must be executed within its directory"
@@ -10,7 +11,6 @@ sudo pacman -S --noconfirm git qtile picom python kitty feh rofi base-devel xorg
 	echo "Failed to install needed packages from pacman"
 	exit 1
 }
-
 echo
 
 if [ ! -e "$HOME/.config" ]; then
@@ -18,30 +18,11 @@ if [ ! -e "$HOME/.config" ]; then
 	mkdir "$HOME/.config"
 fi
 
-# Copy all config files and give the user the option to choose which colorscheme to copy
-install_selected_colorscheme () {
-	\cp "colorschemes/$1/kitty.conf" ~/.config/kitty/
-	\cp "colorschemes/$1/colorpalett.py" ~/.config/qtile/
-}
-
 {
 	echo "Copying all config files to ${HOME}/.config"
 	\cp -r .config/* "$HOME/.config/"
 
-	echo
-	echo "Select a color theme to use"
-	echo "[1] Darkness"
-	echo "[2] Darkness Darker"
-	while true; do
-		read color
-		case $color in
-			[1] ) install_selected_colorscheme "darkness"; break;;
-			[2] ) install_selected_colorscheme "darkness-darker"; break;;
-		esac
-	done
-	
-	# Launch user configuration options
-	echo
+	# Launch configuration options to the user
 	python installation_options.py
 
 } || { echo "Failed to copy config files"; exit 1; }

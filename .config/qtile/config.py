@@ -1,3 +1,5 @@
+#github: https://github.com/Haise777
+
 # If you are looking for configuring things by yourself, refer to the 'settings' directory
 # settings/keymapsconf.py - Mapping of keybinds
 # settings/screenconf.py  - Qtile bar

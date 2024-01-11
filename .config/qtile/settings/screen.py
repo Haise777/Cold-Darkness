@@ -1,3 +1,5 @@
+#github: https://github.com/Haise777
+
 from libqtile import bar, widget
 from libqtile.config import Screen
 from colorpalett import colors
