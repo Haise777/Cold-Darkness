@@ -13,7 +13,7 @@ def copy_colorscheme(selected):
     copy2(f'{selected_theme}colorpalett.py', f'{home_dir}.config/qtile/')
     copy2(f'{selected_theme}kitty.conf', f'{home_dir}.config/kitty/')
  
-print('Select a color scheme to use')
+print('\nSelect a color scheme to use')
 print('[1] Darkness')
 print('[2] N/A\n')
 while True:
@@ -26,9 +26,9 @@ while True:
         break
 '''
 
-print('How should the available workspace be displayed')
+print('\nHow should the available workspace be displayed')
 print('[1] Japanese style')
-print('[2] Numbers style\n')
+print('[2] Numbers style')
 while True:
     choice = input()
     if choice == '1':
@@ -38,7 +38,7 @@ while True:
         grouplabels = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '0')
         break
 
-print('Where should workspaces group be on the bar')
+print('\nWhere should workspaces group be on the bar')
 print('[1] On the center')
 print('[2] On the left')
 while True:
@@ -50,7 +50,7 @@ while True:
         widgets = bar_widgets["on_side"]
         break
 
-print('How should the top bar be displayed')
+print('\nHow should the top bar be displayed')
 print('[1] Floating with a gap on top of screen')
 print('[2] Fixed on top of screen')
 while True:
