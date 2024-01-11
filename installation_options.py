@@ -7,7 +7,7 @@ import os
 
 # Arg to see if it should give the overwrite warning
 if len(argv) == 1:
-    print('Warning: This script will overwrite any changes you\'ve made to \'groups.py\', \'screen.py\' files')
+    print('Warning: This script will overwrite any changes you\'ve made to \'groups.py\', \'screen.py\', \'picom.conf\' files (^c to quit)')
 elif argv[1] != '--install':
     print(argv[0] + ' is not a valid argument')
     exit(1)
