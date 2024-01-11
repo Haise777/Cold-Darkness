@@ -4,7 +4,7 @@ bar_widgets = {
     "centered": '''\
                 widget.Spacer(length=10),
                 # DateTime
-                widget.Clock(format="%a %b %d - %R"),
+                widget.Clock(format="%R - %a %b %d"),
                 widget.Spacer(
                     length=bar.STRETCH
                     ),

@@ -6,23 +6,25 @@ import os
 
 home_dir = os.path.expanduser('~') + '/'
 
+'''   
 ## Show the options to the user
 def copy_colorscheme(selected):
     selected_theme = f'colorschemes/{selected}/'
     copy2(f'{selected_theme}colorpalett.py', f'{home_dir}.config/qtile/')
     copy2(f'{selected_theme}kitty.conf', f'{home_dir}.config/kitty/')
-    
+ 
 print('Select a color scheme to use')
 print('[1] Darkness')
-print('[2] RRR\n')
+print('[2] N/A\n')
 while True:
     choice = input()
     if choice == '1':
         copy_colorscheme('darkness')
         break
     elif choice == '2':
-        copy_colorscheme('RRR')
+        copy_colorscheme('N/A')
         break
+'''
 
 print('How should the available workspace be displayed')
 print('[1] Japanese style')

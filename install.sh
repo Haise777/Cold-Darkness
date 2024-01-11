@@ -6,6 +6,7 @@ if [ ! -e "../cold-darkness" ]; then
 	exit 1
 fi
 
+
 # install all needed dependencies from pacman
 sudo pacman -S --noconfirm git qtile picom python kitty feh rofi base-devel xorg-xrandr xorg-server noto-fonts-cjk noto-fonts-emoji noto-fonts python-psutil ttf-jetbrains-mono-nerd ttf-meslo-nerd || {
 	echo "Failed to install needed packages from pacman"
@@ -70,3 +71,11 @@ done
 
 echo "Finished installing, you can safely delete this directory"
 echo "To set the wallpapers list the theme will use, put the images you want to use in the '$HOME/.local/share/backgrounds/cold-darkness' directory"
+
+echo "You will need to reboot to see effect"
+echo "Reboot now? [y/N]"
+read yn
+case $yn in
+	[yY] ) reboot;;
+	*) exit 0;;
+esac
