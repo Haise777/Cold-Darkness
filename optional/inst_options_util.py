@@ -1,7 +1,7 @@
 #github: https://github.com/Haise777
 
 bar_widgets = {
-    "centered": '''\
+    "centered": f'''\
                 widget.Spacer(length=10),
                 # DateTime
                 widget.Clock(format="%R - %a %b %d"),
@@ -82,7 +82,7 @@ bar_widgets = {
                 widget.Spacer(length=10)
 ''',
 
-    "on_side": '''\
+    "on_side": f'''\
                 widget.Spacer(length=10),
                 # Workspace group
                 widget.GroupBox(
