@@ -1,3 +1,5 @@
+#github: https://github.com/Haise777
+
 from libqtile import hook
 import os
 import subprocess

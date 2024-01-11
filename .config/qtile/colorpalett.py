@@ -1,4 +1,4 @@
-# You can setup the bar colors by changing its related hexadecimal values below
+# You can configure the bar colors by changing its related hexadecimal values below
 colors = {
     "foreground": ["BFBFBF"],  # Bar standard font color
     "background": ["0B0D14"],  # Bar background color

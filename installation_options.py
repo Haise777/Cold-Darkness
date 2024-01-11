@@ -1,7 +1,7 @@
 #github: https://github.com/Haise777
 
 from optional.inst_options_util import bar_widgets
-from shutil import copy2
+#from shutil import copy2
 import os
 
 home_dir = os.path.expanduser('~') + '/'

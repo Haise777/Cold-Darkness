@@ -1,3 +1,5 @@
+#github: https://github.com/Haise777
+
 from libqtile import layout
 from libqtile.config import Match
 from colorpalett import colors
@@ -11,11 +13,11 @@ layout_theme = {
 # Default available layout modes // Uncomment which option you want to be available
 layouts = [
     layout.MonadTall(**layout_theme),
-    layout.MonadWide(**layout_theme),
     layout.Max(**layout_theme),
+    layout.RatioTile(**layout_theme),
+    # Try more layouts by unleashing below layouts.
+    #layout.MonadWide(**layout_theme),
     #layout.Columns(**layout_theme),
-    #layout.RatioTile(**layout_theme),
-    #Try more layouts by unleashing below layouts.
     #layout.Stack(num_stacks=2),
     #layout.Bsp(),
     #layout.Matrix(),

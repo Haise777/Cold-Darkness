@@ -1,3 +1,5 @@
+#github: https://github.com/Haise777
+
 from libqtile.config import Group
 
 # Define available workspaces here
