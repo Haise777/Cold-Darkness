@@ -8,7 +8,7 @@ fi
 
 
 # install all needed dependencies from pacman
-sudo pacman -S --noconfirm git qtile picom python kitty feh rofi base-devel alsa-utils xorg-xrandr xorg-server which noto-fonts-cjk noto-fonts-emoji noto-fonts python-psutil ttf-jetbrains-mono-nerd ttf-meslo-nerd || {
+sudo pacman -S --noconfirm git qtile picom python kitty feh pacman-contrib rofi base-devel alsa-utils xorg-xrandr xorg-server which noto-fonts-cjk noto-fonts-emoji noto-fonts python-psutil ttf-jetbrains-mono-nerd ttf-meslo-nerd || {
 	echo "Failed to install needed packages from pacman"
 	exit 1
 }
@@ -60,10 +60,13 @@ while true; do
 done
 
 echo "Finished installing"
-echo "You can safely delete this directory or you can keep it and use the installation_options.py script to reconfigure it"
-echo "To set the wallpapers list the theme will use, put the images you want to use in the '$HOME/.local/share/backgrounds/cold-darkness' directory"
-echo "You can change the login resolution by your ways or you can add a command to the '$HOME/.config/qtile/autostart.sh' script"
-
+echo
+echo " > You can safely delete this directory or you can keep it and use the installation_options.py script to reconfigure it"
+echo
+echo " > To set the wallpapers list the theme will use, put the images you want to use in the '$HOME/.local/share/backgrounds/cold-darkness' directory"
+echo
+echo " > You can change the login resolution by your ways or you can add a command to the '$HOME/.config/qtile/autostart.sh' script"
+echo
 echo "You will need to reboot to see effect"
 echo "Reboot now? [y/N]"
 read yn
