@@ -71,19 +71,19 @@ bar_widgets = {
                     foreground=colors["separator"],
                     padding=10
                     ),
-                # CPU
-                widget.CPU(
-                    format=' {{load_percent:>3.0f}}%'
+                # Memory
+                widget.Memory(
+                    format='RAM:{{MemUsed:>5.0f}}{{mm}}',
+                    update_interval=5,
                     ),
                 widget.TextBox(
                     text="",
                     foreground=colors["separator"],
                     padding=10
                     ),
-                # Memory
-                widget.Memory(
-                    format='RAM:{{MemUsed:>5.0f}}{{mm}}',
-                    update_interval=5,
+                # CPU
+                widget.CPU(
+                    format=' {{load_percent:>3.0f}}%'
                     ),
                 widget.Spacer(length=10)
 ''',
@@ -154,18 +154,19 @@ bar_widgets = {
                     padding=10
                     ),
                 # CPU
-                widget.CPU(
-                    format=' {{load_percent:>3.0f}}%'
+                # Memory
+                widget.Memory(
+                    format='RAM:{{MemUsed:>5.0f}}{{mm}}',
+                    update_interval=5,
                     ),
                 widget.TextBox(
                     text="",
                     foreground=colors["separator"],
                     padding=10
                     ),
-                # Memory
-                widget.Memory(
-                    format='RAM:{{MemUsed:>5.0f}}{{mm}}',
-                    update_interval=5,
+                # CPU
+                widget.CPU(
+                    format=' {{load_percent:>3.0f}}%'
                     ),
                 widget.TextBox(
                     text="",
