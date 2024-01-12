@@ -20,7 +20,7 @@ screens = [
             [
                 widget.Spacer(length=10),
                 # DateTime
-                widget.Clock(format="%a %b %d - %R"),
+                widget.Clock(format="%R - %a %b %d"),
                 widget.Spacer(
                     length=bar.STRETCH
                     ),
@@ -48,16 +48,16 @@ screens = [
                     length=bar.STRETCH
                     ),
                 widget.Chord(
-                    chords_colors={
+                    chords_colors={{
                         "launch": ("#ff0000", "#ffffff"),
-                    },
+                    }},
                     name_transform=lambda name: name.upper(),
                     ),
                 # Available updates counter
                 widget.CheckUpdates(
                     distro="Arch_checkupdates",
                     update_interval=1800,
-                    display_format="+{updates} ",
+                    display_format="+{{updates}} ",
                     foreground=colors["update"],
                     background=colors["background"],
                     colour_have_updates=colors["update"],
@@ -70,12 +70,7 @@ screens = [
                     foreground=colors["separator"],
                     padding=10
                     ),
-                # Download speed
-                widget.Net(
-                    prefix='M',
-                    update_interval=2,
-                    format='↓{down:>5.2f}{down_suffix}',
-                    ),
+                widget.Volume(fmt='🕪 {{}}'),
                 widget.TextBox(
                     text="",
                     foreground=colors["separator"],
@@ -83,7 +78,18 @@ screens = [
                     ),
                 # CPU
                 widget.CPU(
-                    format=' {load_percent:>3.0f}%'
+                    format=' {{load_percent:>3.0f}}%'
+                    ),
+                widget.TextBox(
+                    text="",
+                    foreground=colors["separator"],
+                    padding=10
+                    ),
+                # Download speed
+                widget.Net(
+                    prefix='M',
+                    update_interval=2,
+                    format='↓{{down:>5.2f}}{{down_suffix}}',
                     ),
                 widget.TextBox(
                     text="",
@@ -92,7 +98,7 @@ screens = [
                     ),
                 # Memory
                 widget.Memory(
-                    format='RAM:{MemUsed:>5.0f}{mm}',
+                    format='RAM:{{MemUsed:>5.0f}}{{mm}}',
                     update_interval=5,
                     ),
                 widget.Spacer(length=10)

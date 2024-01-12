@@ -8,7 +8,7 @@ fi
 
 
 # install all needed dependencies from pacman
-sudo pacman -S --noconfirm git qtile picom python kitty feh rofi base-devel xorg-xrandr xorg-server which noto-fonts-cjk noto-fonts-emoji noto-fonts python-psutil ttf-jetbrains-mono-nerd ttf-meslo-nerd || {
+sudo pacman -S --noconfirm git qtile picom python kitty feh rofi base-devel alsa-utils xorg-xrandr xorg-server which noto-fonts-cjk noto-fonts-emoji noto-fonts python-psutil ttf-jetbrains-mono-nerd ttf-meslo-nerd || {
 	echo "Failed to install needed packages from pacman"
 	exit 1
 }
