@@ -70,7 +70,7 @@ screens = [
                     foreground=colors["separator"],
                     padding=10
                     ),
-                widget.Volume(fmt='🕪 {{}}'),
+                widget.Volume(fmt='⪡ {{}}'),
                 widget.TextBox(
                     text="",
                     foreground=colors["separator"],
