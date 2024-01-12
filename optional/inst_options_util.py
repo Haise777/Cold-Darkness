@@ -60,20 +60,20 @@ bar_widgets = {
                     foreground=colors["separator"],
                     padding=10
                     ),
-                # CPU
-                widget.CPU(
-                    format=' {{load_percent:>3.0f}}%'
+                # Download speed
+                widget.Net(
+                    prefix='M',
+                    update_interval=2,
+                    format='↓{{down:>5.2f}}{{down_suffix}}',
                     ),
                 widget.TextBox(
                     text="",
                     foreground=colors["separator"],
                     padding=10
                     ),
-                # Download speed
-                widget.Net(
-                    prefix='M',
-                    update_interval=2,
-                    format='↓{{down:>5.2f}}{{down_suffix}}',
+                # CPU
+                widget.CPU(
+                    format=' {{load_percent:>3.0f}}%'
                     ),
                 widget.TextBox(
                     text="",
@@ -142,20 +142,20 @@ bar_widgets = {
                     foreground=colors["separator"],
                     padding=10
                     ),
-                # CPU
-                widget.CPU(
-                    format=' {{load_percent:>3.0f}}%'
+                # Download speed
+                widget.Net(
+                    prefix='M',
+                    update_interval=2,
+                    format='↓{{down:>5.2f}}{{down_suffix}}',
                     ),
                 widget.TextBox(
                     text="",
                     foreground=colors["separator"],
                     padding=10
                     ),
-                # Download speed
-                widget.Net(
-                    prefix='M',
-                    update_interval=2,
-                    format='↓{{down:>5.2f}}{{down_suffix}}',
+                # CPU
+                widget.CPU(
+                    format=' {{load_percent:>3.0f}}%'
                     ),
                 widget.TextBox(
                     text="",
