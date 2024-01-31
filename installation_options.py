@@ -2,7 +2,7 @@
 
 from optional.inst_options_util import bar_widgets
 from sys import argv
-#from shutil import copy2
+#from shutil import copy2 # *1
 import os
 
 # Arg to see if it should give the overwrite warning
@@ -14,7 +14,7 @@ elif argv[1] != '--install':
 
 home_dir = os.path.expanduser('~') + '/'
 
-'''   
+''' !!*1 - Currently does not have a use
 ## Show the options to the user
 def copy_colorscheme(selected):
     selected_theme = f'colorschemes/{selected}/'
