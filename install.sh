@@ -1,11 +1,7 @@
 #!/bin/bash
 #github: https://github.com/Haise777
 
-if [ ! -e "../Cold-Darkness" ]; then
-	echo "Installation script must be executed within its directory"
-	exit 1
-fi
-
+cd "$(find ~/ -name "Cold-Darkness")"
 
 # install all needed dependencies from pacman
 sudo pacman -S --noconfirm \

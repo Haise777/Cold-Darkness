@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # install custom terminal
+cd "$(find ~/ -name "custom-terminal")"
 
 sudo pacman -S --noconfirm zsh zsh-autosuggestions zsh-syntax-highlighting lsd
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
