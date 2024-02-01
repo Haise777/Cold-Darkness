@@ -3,10 +3,17 @@
 
 cd "$(find ~/ -name "Cold-Darkness")"
 
+if [[ "$1" == "--no-lheaders" ]]; then
+	LINUX_HEADERS=""
+else
+	LINUX_HEADERS="linux-headers"
+fi
+
 # install all needed dependencies from pacman
 sudo pacman -S --noconfirm \
-	git linux-headers python-dbus-next qtile picom python kitty feh pacman-contrib rofi base-devel alsa-utils xorg-xrandr xorg-server\
-	which noto-fonts-cjk noto-fonts-emoji noto-fonts python-psutil ttf-jetbrains-mono-nerd ttf-meslo-nerd || {
+	git python-dbus-next qtile picom python kitty feh pacman-contrib rofi base-devel alsa-utils xorg-xrandr xorg-server\
+	which noto-fonts-cjk noto-fonts-emoji noto-fonts python-psutil ttf-jetbrains-mono-nerd ttf-meslo-nerd\
+	$LINUX_HEADERS || {
 		echo "Failed to install needed packages from pacman"
 		exit 1
 }
@@ -41,7 +48,7 @@ echo "[y/n]"
 while true; do
 	read yn
 	case $yn in
-		[yY] ) ./optional/terminal/install_terminal.sh; break;;
+		[yY] ) ./optional/custom-terminal/install_terminal.sh; break;;
 		[nN] ) break;;
 	esac
 done
