@@ -9,7 +9,7 @@ fi
 
 # install all needed dependencies from pacman
 sudo pacman -S --noconfirm \
-	git linux-headers qtile picom python kitty feh pacman-contrib rofi base-devel alsa-utils xorg-xrandr xorg-server\
+	git linux-headers python-dbus-next qtile picom python kitty feh pacman-contrib rofi base-devel alsa-utils xorg-xrandr xorg-server\
 	which noto-fonts-cjk noto-fonts-emoji noto-fonts python-psutil ttf-jetbrains-mono-nerd ttf-meslo-nerd || {
 		echo "Failed to install needed packages from pacman"
 		exit 1
@@ -37,17 +37,6 @@ mkdir -p "$HOME/.local/share/backgrounds/cold-darkness"
 \cp wallpapers/* "$HOME/.local/share/backgrounds/cold-darkness/"
 
 # install custom terminal
-install_terminal () {
-	sudo pacman -S --noconfirm zsh
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-	\cp -r optional/.* "$HOME/"
-	echo
-	echo "you will be prompted to enter your password in order to change the default terminal to .zsh"
-	chsh -s "$(which zsh)"
-}
-
 echo
 echo "Install and setup the customized terminal emulator from the theme?"
 echo "Emulator: zsh"
@@ -56,7 +45,7 @@ echo "[y/n]"
 while true; do
 	read yn
 	case $yn in
-		[yY] ) install_terminal; break;;
+		[yY] ) ./optional/terminal/install_terminal.sh; break;;
 		[nN] ) break;;
 	esac
 done
