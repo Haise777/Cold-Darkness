@@ -1,8 +1,8 @@
 #github: https://github.com/Haise777
 
-# If you are looking for configuring things by yourself, refer to the 'settings' directory
+# If you are looking for configuring things by yourself, go to the 'settings' directory
 # settings/keymapsconf.py - Mapping of keybinds
-# settings/screenconf.py  - Qtile bar
+# settings/screenconf.py  - Qtile bar and it's widgets
 # settings/layoutsconf.py - Window and modes
 # settings/groupsconf.py  - Workspaces
 # settings/hooks.py       - Event hooks
@@ -13,6 +13,8 @@ from settings.layouts import layouts, floating_layout
 from settings.screen import screens, widget_defaults
 from settings.hooks import autostart, floating_dialogs
 
+
+# Base Qtile configuration variables
 extension_defaults = widget_defaults.copy()
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list

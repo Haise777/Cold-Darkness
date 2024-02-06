@@ -116,6 +116,8 @@ from libqtile import bar, widget
 from libqtile.config import Screen
 from colorpalett import colors
 
+# Note that the color's list is found at the base directory
+
 # Default values of the bar widgets
 widget_defaults = dict(
     font="JetBrains Mono Nerd Font",

@@ -17,15 +17,12 @@ bar_widgets = {
                     rounded=False,
                     disable_drag=True,
                     highlight_color=colors["highlight"],
-                    this_current_screen_border=colors["current"],  # current active workspace color - MAIN
+                    this_current_screen_border=colors["current"],  # current active workspace color
                     this_screen_border=colors["current"],
                     other_current_screen_border=colors["background"],
                     other_screen_border=colors["background"],
                     urgent_border=colors["highlight"],
                     urgent_text=colors["highlight"],
-                    #foreground = colorthemes["fg"],
-                    #background = colorthemes["red"],
-                    #hide_unused=True,
                     ),
                 #widget.WindowName(),
                 widget.Spacer(
@@ -99,15 +96,12 @@ bar_widgets = {
                     rounded=False,
                     disable_drag=True,
                     highlight_color=colors["highlight"],
-                    this_current_screen_border=colors["current"],  # current active workspace color - MAIN
+                    this_current_screen_border=colors["current"],  # current active workspace color
                     this_screen_border=colors["current"],
                     other_current_screen_border=colors["background"],
                     other_screen_border=colors["background"],
                     urgent_border=colors["highlight"],
                     urgent_text=colors["highlight"],
-                    #foreground = colorthemes["fg"],
-                    #background = colorthemes["red"],
-                    #hide_unused=True,
                     ),
                 #widget.WindowName(),
                 widget.Spacer(
