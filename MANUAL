@@ -8,11 +8,11 @@ to configure it by yourself.
 All the Qtile's config logic is separated to it's own files and there is lot's of comment markings made by me to make your
 life easier.
 In '~/.config/qtile/settings/' you should find all you need:
-    groups  -> more know as workspaces
-    hooks   -> functions to hook on events
-    keymaps -> setup all your bindings there
-    layouts -> modes and window settings
-    screen  -> setup bar and it's individual widgets
+    groups  - more know as workspaces
+    hooks   - functions to hook on events
+    keymaps - setup all your bindings there
+    layouts - modes and window settings
+    screen  - setup bar and it's individual widgets
 
 > To set the wallpapers list this theme will use, put the images you want to use in the '.local/share/backgrounds/cold-darkness' directory"
 Qtile will auto pick a random image at the cold-darkness background directory to display at every login, you can add your owns
@@ -27,3 +27,5 @@ eg: Adding 'xrandr -s 1920x1080' to the autostart will make so that the resoluti
 > You can safely delete this directory or you can keep it and run the 'installation_options' script to reconfigure the theme"
 By running the installation_options script, you can retry the theme with it's different installation options
 without the need to rerun the installation process
+
+> If you have any suggestions or problems, feel free to leave them at the theme's github page 'https://github.com/Haise777/Cold-Darkness'

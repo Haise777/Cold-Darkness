@@ -105,6 +105,7 @@ print_manual_entry 2
 print_manual_entry 3
 print_manual_entry 4
 print_manual_entry 5
+print_manual_entry 6
 printf "You can read more about the above by reading the ${cyan}MANUAL${rs} file\n\n"
 echo "You will need to reboot to see effects"
 echo "Reboot now? [y/N]"
