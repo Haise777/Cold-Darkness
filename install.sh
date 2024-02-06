@@ -17,14 +17,17 @@ rs='\033[0m'
 cyan='\033[0;36m'
 
 printf "\n${cyan}"
-printf "   ____      _     _   ____             _                        \n"
-printf "  / ___|___ | | __| | |  _ \\  __ _ _ __| | ___ __   ___  ___ ___ \n"
-printf " | |   / _ \\| |/ _\` | | | | |/ _\` | '__| |/ / '_ \\ / _ \\/ __/ __|\n"
-printf " | |__| (_) | | (_| | | |_| | (_| | |  |   <| | | |  __/\\__ \\__ \\ \n"
-printf "  \\____\\___/|_|\\__,_| |____/ \\__,_|_|  |_|\\_\\_| |_|\\___||___/___/\n"
+printf ' _________        .__       .___ ________                __                                \n'
+printf ' \_   ___ \  ____ |  |    __| _/ \______ \ _____ _______|  | __ ____   ____   ______ ______\n'
+printf ' /    \  \/ /  _ \|  |   / __ |   |    |  \\\\__  \\\\_  __ \  |/ //    \_/ __ \ /  ___//  ___/\n'
+printf ' \     \___(  <_> )  |__/ /_/ |   |    `   \/ __ \|  | \/    <|   |  \  ___/ \___ \ \___ \ \n'
+printf '  \______  /\____/|____/\____ |  /_______  (____  /__|  |__|_ \___|  /\___  >____  >____  >\n'
+printf '         \/                  \/          \/     \/           \/    \/     \/     \/     \/ \n'
 printf "${rs}\n"
-printf "             A minimal to install and nice ${cyan}Qtile${rs} theme\n"
-printf "                 Theme and script made by \033[1;36m\033[4;36mHaise777${rs}\n\n"
+printf "                         A minimal to install and nice ${cyan}Qtile${rs} theme\n"
+printf "                             Theme and script made by \033[1;36m\033[4;36mHaise777${rs}\n\n"
+
+
 
 
 # install all needed dependencies from pacman
