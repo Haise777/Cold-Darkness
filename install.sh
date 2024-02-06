@@ -70,19 +70,20 @@ mkdir -p "$HOME/.local/share/backgrounds/cold-darkness"
 # Give the choice to install a custom terminal configuration
 echo
 echo "Want to install and setup a powerful terminal costumization?"
-echo "Emulator: zsh"
-echo "!!Work on a better description!!"
+echo "Interpreter: zsh"
+echo "Terminal costumization that comes with nice, already set up plugins and better alternatives for the default shell commands"
+echo "to enhance your terminal experience"
 echo "[y/n]"
 while true; do
 	read yn
 	case $yn in
 		[yY] ) {
-			sudo pacman -S --noconfirm zsh curl make gcc unzip
-			if [ ! -e TerminalConf_Linux ]; then
-				git clone https://github.com/Haise777/TerminalConf_Linux
+			sudo pacman -S --noconfirm zsh curl make wget gcc unzip
+			if [ ! -e TerminalConfig_Linux ]; then
+				git clone https://github.com/Haise777/TerminalConfig_Linux
 			fi
-			chmod u+x TerminalConf_Linux/install.sh
-			TerminalConf_Linux/install.sh --powerline
+			chmod u+x TerminalConfig_Linux/install.sh
+			TerminalConfig_Linux/install.sh --powerline
 			\cp -r optional/custom-terminal/.config/* "$HOME/.config"
 
 		}; break;;
@@ -92,16 +93,20 @@ done
 
 
 # Finish script section
+function print_manual_entry() {
+	awk -v var="$1" '/>/{i++}i==var{print; exit}' MANUAL
+	echo
+}
+
 echo "Finished installing"
 echo
-awk '/>/{i++}i==1{print; exit}' MANUAL
-echo
-awk '/>/{i++}i==2{print; exit}' MANUAL
-echo
-awk '/>/{i++}i==3{print; exit}' MANUAL
-echo
-printf "You can read more about the theme by reading the ${cyan}MANUAL${rs} file\n\n"
-echo "You will need to reboot to see effect"
+print_manual_entry 1
+print_manual_entry 2
+print_manual_entry 3
+print_manual_entry 4
+print_manual_entry 5
+printf "You can read more about the above by reading the ${cyan}MANUAL${rs} file\n\n"
+echo "You will need to reboot to see effects"
 echo "Reboot now? [y/N]"
 read yn
 case $yn in

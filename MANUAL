@@ -1,12 +1,29 @@
-> You can safely delete this directory or you can keep it and run the installation_options.py script to reconfigure it"
-blablalbalblal
-blablalb
+> Note that this theme is intended to have a minimal installation process. Read the 'MANUAL' file for more details
+This theme is designed to make minimal as possible mess, so that it not strip away your chance to costumize your system to your own
+options and likings without filling it with a lot of 'my personal preference bloats', so things like Display Managers, Browsers,
+Text Editors, etc WILL NOT be installed, nor messed with by this theme above what Qtile already do by default.
+
+> If you have anything that you wanted, you are encouraged to take a look at the Qtile's config files, as it is more easy than you think
+to configure it by yourself.
+All the Qtile's config logic is separated to it's own files and there is lot's of comment markings made by me to make your
+life easier.
+In '~/.config/qtile/settings/' you should find all you need:
+    groups  -> more know as workspaces
+    hooks   -> functions to hook on events
+    keymaps -> setup all your bindings there
+    layouts -> modes and window settings
+    screen  -> setup bar and it's individual widgets
 
 > To set the wallpapers list this theme will use, put the images you want to use in the '.local/share/backgrounds/cold-darkness' directory"
-mais blablalbalbal'
-backgroundsabla
-backgroundsa
+Qtile will auto pick a random image at the cold-darkness background directory to display at every login, you can add your owns
+and remove the default ones if you choose.
+You also can alter this behaviour by changing or completely removing the feh entry in the '.config/qtile/autostart.sh'
 
 > You can change the login resolution by your ways or you can add a command to the '.config/qtile/autostart.sh' script"
-um pouco mais de blablalbalbal
-blablalbalbal
+The installation process will not change how your display manager deals with resolution, so you must set it up by yourself,
+qtile should adapt without problems to your resolution options. Alternatively, you can add a entry to the qtile's autostart script
+eg: Adding 'xrandr -s 1920x1080' to the autostart will make so that the resolution is set in the qtile's startup
+
+> You can safely delete this directory or you can keep it and run the 'installation_options' script to reconfigure the theme"
+By running the installation_options script, you can retry the theme with it's different installation options
+without the need to rerun the installation process
