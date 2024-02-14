@@ -40,6 +40,12 @@ without the need to rerun the installation process
 > If you have any suggestions or problems, feel free to leave them at the theme's github page 'https://github.com/Haise777/Cold-Darkness'
 
 
+> By default you can change the system sound volume by scrolling with the mousewheel on the sound widget
+
+By scrolling the mousewheel in the arrow with a percentage to it's side, you can control your general volume, you
+also can mute the sound by clicking on it.
+
+
 > Change the default colors of the theme
 
 Simply edit the 'colorspallet.py' file found in the '.config/qtile/' directory
